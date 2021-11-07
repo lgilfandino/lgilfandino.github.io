@@ -1,0 +1,78 @@
+<!-- given a collection name, shows all files that aren't in site.list_exclude -->
+<!-- in a 3-column format -->
+
+
+<div>
+
+
+  {% assign sorted_posts = site[include.collection_name] | sort: "date" | reverse %}
+  {% for post in sorted_posts %}
+  {% assign post_name = post.url | split: "/" | last %}
+  {% unless site.list_exclude contains post_name %}
+  <div class="row list-row">
+    <!-- empty space to the left -->
+    <div class="col-md-2"></div>
+
+    <!-- left column: title and optional summary  -->
+    <div class="col-md-4">
+      <!-- col-md-12 inside a column simply adds some margin -->
+      <div class="col-md-12">
+      <p class="list-title"><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></p>
+      {% if post.summary %}
+      <p class="list-summary text-justify">{{ post.summary | truncate: site.summary_truncate_chars }}</p>
+      {% endif %}
+      </div>
+    </div>
+
+    <!-- middle column: optional thumbnail -->
+    <div class="col-md-2 align-self-center">
+      {% if post.image %}
+      <!-- col-md-12 inside a column simply adds some margin -->
+      <div class="col-md-12">
+        <a href="{{ post.url }}"><img class="list-thumbnail" src="{{ post.image }}" alt="{{ post.image_description }}"></a>
+      </div>
+      {% endif %}
+    </div>
+
+    <!-- right column: entry metadata -->
+    <div class="col-md-2">
+      <!-- col-md-12 inside a column simply adds some margin -->
+      <div class="col-md-12">
+      <p class="list-metadata">{{ post.date | date_to_string }}</p>
+    <!--   NO TAGS OR CATEGORIES FOR THE MOMENT -->
+    <!--   {% if post.tags != empty %} -->
+    <!--   <p> -->
+    <!--     <span class="list-metadata">Tags: </span> -->
+    <!--     {% for tag in post.tags %} -->
+    <!--     {{ tag }} -->
+    <!--   {% endfor %} -->
+    <!--   </p> -->
+    <!--   {% endif %} -->
+    <!--   {% if post.categories != empty %} -->
+    <!--   <p><span class="list-metadata">Categories: </span> -->
+    <!--     {{ post.categories }} -->
+    <!--   </p> -->
+      <!-- {% endif %} -->
+      </div>
+    </div>
+
+    <!-- empty space to the right -->
+    <div class="col-md-2"></div>
+  </div>  <!-- end of list-row -->
+
+  <!-- add horizontal line after each elt except last -->
+  {% unless forloop.last %}
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+      <hr>
+    </div>
+    <div class="col-md-2"></div>
+  </div>
+  {% endunless %}
+
+
+  {% endunless %}
+  {% endfor %}
+
+</div>

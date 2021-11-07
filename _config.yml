@@ -1,0 +1,67 @@
+# jekyll configuration
+markdown: kramdown
+kramdown:
+  math_engine: mathjax
+future: true  # show posts with future dates
+plugins:
+  - jemoji
+
+
+# collections manage the content
+collections:
+  updates:
+    output: true
+    name: Updates
+
+
+# navigation bar entries, usually related to collections
+navigation:
+  - name: Inicio
+    link: /
+  - name: Proyectos
+    link: /updates/
+
+
+# globals
+name: "lgilfandino"  # shows up in the browser tab
+title_name: "Lucía Gil Fandiño"
+
+
+# front image configuration
+front_img: "static/waves2.png"
+front_img_opacity: 1  # in ratio
+front_img_blur: 2  # in pixels
+front_img_height: 300  # in pixels
+
+
+# profile image configuration
+profile_img: "static/profile.jpeg"
+profile_img_frame_thickness: 1  # in pixels
+profile_img_frame_color: "#aaaaaa"
+profile_img_roundness: 46  # in percentage
+profile_img_top_margin: -200  # in pixels. negative to shift upwards
+profile_img_bottom_margin: 40  # in pixels
+profile_img_left_margin: 0  # in percentage
+profile_img_height: 0.6  # ratio w.r.t. front image
+
+
+# footer configuration
+footnote: "© lgilfandino 2021"
+
+
+# configure here the favicons that appear below the front images
+social:
+  - link: "https://www.linkedin.com/in/luciagilfandiño"
+    icon_class: "fab fa-linkedin fa-3x"
+  - link: "mailto: lucia.g576389@gmail.com"
+    icon_class: "fa fa-envelope fa-3x"
+
+
+# list template configuration
+summary_truncate_chars: 300
+list_exclude: ["index.html", "index.md"]  # the list layout will not list any file named like this
+
+
+# helpful resources:
+# get collection by name: https://jekyllrb.com/docs/upgrading/2-to-3/#sitecollections-has-changed
+# https://github.com/jekyll/jekyll/issues/4392

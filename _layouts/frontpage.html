@@ -1,0 +1,39 @@
+---
+layout: base
+---
+
+<!-- front and profile images -->
+<div>
+  <div id="frontimg_container" style="max-height:{{ site.front_img_height }}px;">
+    <img id="frontimg" src="{{ site.front_img }}" style="opacity:{{ site.front_img_opacity }}; filter: blur({{ site.front_img_blur }}px);">
+  </div>
+
+
+  <div id="profile-container" style="margin-top:{{ site.profile_img_top_margin }}px; margin-bottom:{{ site.profile_img_bottom_margin }}px; margin-left:{{ site.profile_img_left_margin }}%;">
+    <ul style="">
+      <li>
+        <img id="profileimg" src="{{ site.profile_img }}" alt="Profile image" style="background-color:{{ site.profile_img_frame_color }}; border-radius:{{ site.profile_img_roundness }}%; padding:{{ site.profile_img_frame_thickness }}px; height:{{ site.front_img_height | times: site.profile_img_height }}px">
+      </li>
+      <!-- padding: top right bottom left -->
+      <li id="profiletxt" style="padding: {{ site.front_img_height | times: site.profile_img_height | times: 0.4 }}px 0px 0px 0px;">
+        {{ site.title_name }}
+      </li>
+    </ul>
+  </div>
+
+  <!-- media and social banners -->
+  <div class="social-pane">
+    <ul>
+      {% for item in site.social %}
+      <li>
+        <a href="{{ item.link }}"><i class="{{ item.icon_class }}" aria-hidden="true"></i></a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
+<!-- presentation content (usually index.html or index.md)-->
+<div class="container">
+  {% include centercolumn.html %}
+</div>
