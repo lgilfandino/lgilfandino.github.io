@@ -6,7 +6,7 @@
     <ul class="nav navbar-nav">
       {% for item in site.navigation %}
       {% assign path_no_idx = page.url | replace: "index.html", "" | replace: "index.md", "" %}
-      <li {% if path_no_idx == item.link %}class="active asdf"{% else %}class="asdf"{% endif %}>
+      <li {% if path_no_idx == item.link %}class="active navbar-li"{% else %}class="navbar-li"{% endif %}>
         <a href="{{ item.link }}">{{ item.name }}</a>
       </li>
       {% endfor %}
