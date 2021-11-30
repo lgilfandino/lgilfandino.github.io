@@ -50,7 +50,6 @@ footnote: "© lgilfandino 2021"
 
 
 # configure here the favicons that appear below the front images
-social_icon_color: "#8263a6"
 social:
   - link: "https://www.linkedin.com/in/luciagilfandiño"
     icon_class: "fab fa-linkedin fa-3x"
