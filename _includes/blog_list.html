@@ -2,9 +2,6 @@
 <!-- in a 3-column format -->
 
 
-<div>
-
-
   {% assign sorted_posts = site[include.collection_name] | sort: "date" | reverse %}
   {% for post in sorted_posts %}
   {% assign post_name = post.url | split: "/" | last %}
@@ -74,5 +71,3 @@
 
   {% endunless %}
   {% endfor %}
-
-</div>

@@ -1,6 +1,6 @@
 :root {
   --textcolor: #333;
-  --linkcolor: #676778;
+  --linkcolor: #5814a6; /* #676778; */
   --lightbg: #e7e7e7;
   --midlightbg: #a7a7a7;
   --middarkbg: #707070;
@@ -45,7 +45,7 @@ p {
 
 a {
     text-decoration: none;
-    font-weight: 600;
+    /* font-weight: 600; */
     color: var(--linkcolor);
 }
 

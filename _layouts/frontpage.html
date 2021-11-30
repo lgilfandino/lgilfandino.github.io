@@ -26,7 +26,7 @@ layout: base
     <ul>
       {% for item in site.social %}
       <li>
-        <a href="{{ item.link }}"><i class="{{ item.icon_class }}" aria-hidden="true"></i></a>
+        <a href="{{ item.link }}" style="color: {{ site.social_icon_color }};"><i class="{{ item.icon_class }}" aria-hidden="true"></i></a>
       </li>
       {% endfor %}
     </ul>
