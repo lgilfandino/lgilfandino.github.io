@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Nanocápsulas Plasmónicas de Pd: Síntesis, Caracterización y Aplicación"
-summary: "Trabajo fin de grado en el CINBIO"
+summary: "Trabajo Fin de Grado en el CINBIO"
 date: 2020-07-01
 image: "/static/nanocapsule-synthesis.jpeg"
 ---
