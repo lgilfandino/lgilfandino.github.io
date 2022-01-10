@@ -21,7 +21,7 @@ image: "/static/nanocapsule-synthesis.jpeg"
 
 Ciertos nanomateriales adquieren nuevas propiedades respecto a los correspondientes materiales masivos. Este es el caso del Pd, un elemento con una capacidad catalítica extraordinaria, además de una importante estabilidad térmica. En las nanopartículas (NPs) de Pd, la capacidad catalítica podría verse reforzada gracias a las propiedades ópticas que adquiere el propio material a escala nanométrica.
 
-Debido a la irrupción de la pandemia COVID-19, la síntesis de nanocápsulas de Pd no se pudo llevarse a cabo en laboratorio, y la temática se reenfocó a técnicas existentes para síntesis, caracterización y aplicación fotocatalítica de nanocápsulas compuestas por aleaciones Ag-Pd.
+Debido a la irrupción de la pandemia COVID-19, la síntesis de nanocápsulas de Pd no pudo llevarse a cabo en el laboratorio, y la temática se reenfocó a técnicas existentes para síntesis, caracterización y aplicación fotocatalítica de nanocápsulas compuestas por aleaciones Ag-Pd.
 
 La síntesis de las nanocápsulas se lleva a cabo de dos formas diferentes: mediante reemplazamiento galvánico combinado con correducción, y sin combinar. Los resultados respaldan el uso de correducción como la alternativa más robusta.
 
